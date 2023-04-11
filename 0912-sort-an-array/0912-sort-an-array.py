@@ -9,7 +9,7 @@ class Solution:
         merged = []
         while len(left) and len(right):
             if left[0] < right[0]:
-                merged.push(left.pop(0))
+                merged.push(left.shift())
             else:
-                merged.push(right.pop(0))
+                merged.push(right.shift())
         return merged + left + right
