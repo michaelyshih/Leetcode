@@ -9,7 +9,7 @@ class Solution:
         dummy = ListNode(0,head)
         slow = dummy
         fast = head
-        while n >= 1 and fast:
+        while n >= 1:
             fast = fast.next
             n-=1
         while fast:
