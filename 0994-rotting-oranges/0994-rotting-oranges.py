@@ -3,10 +3,14 @@ class Solution:
     def orangesRotting(self, grid: List[List[int]]) -> int:
         ROWS, COLS = len(grid), len(grid[0])
         queue = deque()
+        #fresh oranges counter
         fresh = 0
         minute = 0
-        
-        #fresh oranges counter
+                
+        def _inbound(r,c):
+            rowInbound = 0 <= r < ROWS
+            colInbound = 0 <= c < COLS
+            return rowInbound and colInbound
         
         #initialize with all bad oranges 
         for r in range(ROWS):
@@ -21,15 +25,10 @@ class Solution:
         
         directions = ((1,0), (0,1), (-1,0), (0,-1))
         
-        def _inbound(r,c):
-            rowInbound = 0 <= r < ROWS
-            colInbound = 0 <= c < COLS
-            return rowInbound and colInbound
-        
         while queue:
             r, c, minute = queue.popleft()
             
-            #added neighbor oranges to queue, also need to convert to rotten
+            #added neighbor oranges to queue, also need to convert to rotten, decrement fresh
             for dir in directions:
                 newRow = r + dir[0]
                 newCol = c + dir[1]
@@ -40,9 +39,9 @@ class Solution:
                     fresh -= 1
             
         #after all the queue is popped out    
-        if fresh != 0: 
-            return -1
-        else: 
-            return minute 
-        
+        # if fresh != 0: 
+        #     return -1
+        # else: 
+        #     return minute 
+        return minute if fresh == 0 else -1
         #keep track of level compared to length of queue 
