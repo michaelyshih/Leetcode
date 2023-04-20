@@ -1,14 +1,24 @@
-var climbStairs = function(n) {
-    if (n == 1 || n == 0) return 1 // our base cases
+var climbStairs = function(n, memo = {}) {
+//     if (n == 1 || n == 0) return 1 // our base cases
 
-    let first = 1;
-    let second = 2;
+//     let first = 1;
+//     let second = 2;
 
-    for (let i = 3; i <= n; i++) {
-        let third = first + second;
-        first = second;
-        second = third;
-    }
-    return second;
+//     for (let i = 3; i <= n; i++) {
+//         let third = first + second;
+//         first = second;
+//         second = third;
+//     }
+//     return second;
 
+    // var fib = function(n){
+        if (n == 1 || n == 0 ) return 1
+        if (memo[n]) return memo[n]
+        // memo[n] = fib(n-1) + fib(n-2)
+        memo[n] = climbStairs(n-1, memo) + climbStairs(n-2,memo)
+        
+        return memo[n]
+    // }
+    // return fib(n)
 };
+
