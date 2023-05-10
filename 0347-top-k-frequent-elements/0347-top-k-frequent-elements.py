@@ -21,8 +21,8 @@ class Solution:
             if len(res)<k:
                 heapq.heappush(res,(count,val))
             else:
-                heapq.heappush(res,(count,val))
-                heapq.heappop(res)
+                heapq.heappushpop(res,(count,val))
+                # heapq.heappop(res)
         print(res)
         return [val for count, val in res]
         
