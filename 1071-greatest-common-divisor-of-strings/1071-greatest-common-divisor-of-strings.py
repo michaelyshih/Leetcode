@@ -10,5 +10,3 @@ class Solution:
                 return res
             end -= 1
         return ""
-    
-#         len(res * len(res/len(res))) = len(long)
