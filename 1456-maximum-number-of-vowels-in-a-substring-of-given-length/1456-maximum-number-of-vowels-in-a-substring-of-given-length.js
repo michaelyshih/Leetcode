@@ -43,6 +43,7 @@ var maxVowels = function(s, k) {
         }
         l += 1 
         
+        if (vowelCount == k) return vowelCount 
         if (vowelCount > maxCount) maxCount = vowelCount
         
     } 
