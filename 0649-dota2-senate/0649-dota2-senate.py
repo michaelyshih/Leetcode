@@ -21,7 +21,7 @@ class Solution:
         while D and R:
             rTurn = R.popleft()
             dTurn = D.popleft()
-            R.append(rTurn + n) if rTurn < dTurn else D.append(dTurn+n)
-            n += 1
+            R.append(rTurn + n) if rTurn < dTurn else D.append(dTurn + n)
+            # n += 1
 
         return "Radiant" if R else "Dire"
