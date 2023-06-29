@@ -19,6 +19,12 @@ class Solution:
         # print (current)
         i = 1
         
+        def _end(eveP, evenhead, oddP, current):
+            oddP.next = evenhead
+            eveP.next = None
+            current = None
+            return 
+        
         while current:
             oddP.next = current 
             oddP = oddP.next
@@ -29,14 +35,10 @@ class Solution:
             elif current.next:
                 eveP.next = current.next
                 eveP = eveP.next
-                oddP.next = evenhead
-                eveP.next = None
-                current = None
+                _end(eveP, evenhead, oddP, current)
                 break
             else:
-                oddP.next = evenhead
-                eveP.next = None
-                current = None 
+                _end(eveP, evenhead, oddP, current)
                 break
         
 #         while current: 
