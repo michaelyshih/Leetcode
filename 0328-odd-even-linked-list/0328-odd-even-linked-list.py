@@ -20,26 +20,20 @@ class Solution:
         i = 1
         
         while current:
+            oddP.next = current 
+            oddP = oddP.next
             if current.next and current.next.next:
-                oddP.next = current 
-                oddP = oddP.next
                 eveP.next = current.next
                 eveP = eveP.next
                 current = current.next.next
             elif current.next:
-                oddP.next = current
-                oddP = oddP.next 
                 eveP.next = current.next
                 eveP = eveP.next
-                oddP.next = current
-                oddP = oddP.next 
                 oddP.next = evenhead
                 eveP.next = None
                 current = None
                 break
             else:
-                oddP.next = current
-                oddP = oddP.next 
                 oddP.next = evenhead
                 eveP.next = None
                 current = None 
