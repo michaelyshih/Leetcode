@@ -15,21 +15,50 @@ class Solution:
         
         oddP = current = head 
         eveP = evenhead = head.next 
+        current = current.next.next 
+        # print (current)
         i = 1
         
-        while current: 
-            if i > 2 and i % 2 != 0:
+        while current:
+            if current.next and current.next.next:
                 oddP.next = current 
                 oddP = oddP.next
-                
-            elif i > 2 and i % 2 == 0:
-                eveP.next = current
+                eveP.next = current.next
                 eveP = eveP.next
-            current = current.next 
-            i += 1 
-        eveP.next = None 
-        oddP.next = evenhead
+                current = current.next.next
+            elif current.next:
+                oddP.next = current
+                oddP = oddP.next 
+                eveP.next = current.next
+                eveP = eveP.next
+                oddP.next = current
+                oddP = oddP.next 
+                oddP.next = evenhead
+                eveP.next = None
+                current = None
+                break
+            else:
+                oddP.next = current
+                oddP = oddP.next 
+                oddP.next = evenhead
+                eveP.next = None
+                current = None 
+                break
         
+#         while current: 
+#             if i > 2 and i % 2 != 0:
+#                 oddP.next = current 
+#                 print(current)
+#                 oddP = oddP.next
+                
+#             elif i > 2 and i % 2 == 0:
+#                 eveP.next = current
+#                 eveP = eveP.next
+#             current = current.next 
+#             i += 1 
+
+#         oddP.next = evenhead
+#         eveP.next = None
         
         return head
                 
