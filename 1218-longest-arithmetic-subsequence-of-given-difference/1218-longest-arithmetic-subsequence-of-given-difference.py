@@ -1,8 +1,14 @@
 class Solution:
     def longestSubsequence(self, arr: List[int], difference: int) -> int:
-        dp = defaultdict(int)
-        print(arr)
-        for num in arr: 
-            dp[num] = 1 + dp[num-difference]
-        print(dp)
-        return max(dp.values())
+        dp = {}
+        answer = 1
+        for a in arr:
+            before_a = dp.get(a - difference, 0)
+            dp[a] = before_a + 1
+            answer = max(answer, dp[a])
+            
+        return answer
+        # dp = defaultdict(int)
+        # for num in arr: 
+        #     dp[num] = 1 + dp[num-difference]
+        # return max(dp.values())
