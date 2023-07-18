@@ -9,19 +9,19 @@ var merge = function(intervals) {
   // Resulting array of merged intervals
   // It will serve as a stack when solving problem
   const merged = [];
-  let currentInterval = sortedIntervals[0];
-  merged.push(currentInterval);
+  let curr = sortedIntervals[0];
+  merged.push(curr);
 
-  for (const nextInterval of sortedIntervals) {
-    const [_, currentIntervalEnd] = currentInterval;
-    const [nextIntervalStart, nextIntervalEnd] = nextInterval;
+  for (const nextInt of sortedIntervals) {
+    const [_, currEnd] = curr;
+    const [nxtSt, nxtEnd] = nextInt ;
 
-    if (currentIntervalEnd >= nextIntervalStart) {
+    if (currEnd >= nxtSt) {
       // If current and next intervals overlap, then merge them
-      currentInterval[1] = Math.max(currentIntervalEnd, nextIntervalEnd);
+      curr[1] = Math.max(currEnd, nxtEnd);
     } else {
-      currentInterval = nextInterval;
-      merged.push(currentInterval);
+      curr = nextInt;
+      merged.push(curr);
     }
   }
 
