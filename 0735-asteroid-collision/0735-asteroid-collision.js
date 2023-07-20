@@ -9,7 +9,6 @@ var asteroidCollision = function(asteroids) {
            let diff = a + stack[stack.length-1]
            if (diff < 0){
                stack.pop()
-               console.log(stack)
            }else if(diff > 0){
                a = 0
            }else{
