@@ -20,10 +20,7 @@ MinStack.prototype.push = function(val) {
     }else{
         prevMin = this.lastNode.min
     }
-    console.log("topNode:", this.lastNode)
-    console.log("prevMin:", prevMin)
     newMin = Math.min(prevMin,val)
-    console.log("newMin:", Math.min(prevMin,val))
     node = new minNode(val,newMin)
     this.stack.push(node)
     this.lastNode = this.stack[this.stack.length-1]
