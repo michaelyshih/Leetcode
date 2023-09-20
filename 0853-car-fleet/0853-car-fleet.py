@@ -25,7 +25,6 @@ class Solution:
         res = [] 
         for p, s in carsV: 
             carV = (target - p)/s
-            print(carV)
             res.append(carV)
             if len(res) >= 2 and res[-1] <= res[-2]:
                 res.pop()
