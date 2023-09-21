@@ -3,7 +3,7 @@ class Solution:
         if (n < 2): return n
         first, last = 1,2 
         for val in range(2,n):
-            next = first + last 
+            nextV = first + last 
             first = last 
-            last = next 
+            last = nextV 
         return last 
