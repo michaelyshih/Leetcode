@@ -1,20 +1,33 @@
 class Solution:
     def sortString(self, s: str) -> str:
-        l1 = []
-        for i in s:
-            l1.append(i)
-            r = ""
-        while len(l1)>0:
-            l2 = set(l1)
-            l2 = list(l2)
-            l2.sort()
-            for i in l2 :
-                if i in l1:
-                    r = r+i
-                    l1.remove(i)
-            l2 = l2[::-1]
-            for i in l2:
-                if i in l1:
-                    r = r+i
-                    l1.remove(i)
-        return r
+        res = []
+        
+        # frequence
+        d = defaultdict(int)
+        for ch in s:
+            d[ch] += 1
+        
+        while True:
+            #increase round
+            for i in range(26):
+                ch = chr(ord('a') + i)
+                if d[ch] > 0:
+                    res.append(ch)
+                    d[ch] -= 1
+            
+            #decrease round
+            for i in range(26):
+                ch = chr(ord('z') - i)
+                if d[ch] > 0:
+                    res.append(ch)
+                    d[ch] -= 1
+            
+            # check quit condition
+            stop = True
+            for key in d:
+                if d[key] > 0:
+                    stop = False
+                    break
+            
+            if stop:
+                return "".join(x for x in res)
