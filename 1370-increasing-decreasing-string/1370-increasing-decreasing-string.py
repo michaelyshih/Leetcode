@@ -1,6 +1,6 @@
 class Solution:
     def sortString(self, s: str) -> str:
-        res = []
+        res = ''
         # frequence
         d = defaultdict(int)
         for ch in s:
@@ -11,15 +11,15 @@ class Solution:
             for i in range(26):
                 ch = chr(ord('a') + i)
                 if d[ch] > 0:
-                    res.append(ch)
+                    res += ch
                     d[ch] -= 1
             
             #decrease round
             for i in range(26):
                 ch = chr(ord('z') - i)
                 if d[ch] > 0:
-                    res.append(ch)
+                    res += ch
                     d[ch] -= 1
             
             # check quit condition
-        return "".join(x for x in res)
+        return res
