@@ -1,7 +1,7 @@
 class Solution:
     def gcdOfStrings(self, str1: str, str2: str) -> str:
-        shorter = str1 if len(str1) < len(str2) else str2
-        longer = str1 if not shorter == str1 else str2
+        shorter = min(str1,str2)
+        longer = max(str1,str2)
         end = len(shorter)
         while end > 0:
             res = shorter[:end] 
