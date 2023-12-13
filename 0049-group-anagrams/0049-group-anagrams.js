@@ -5,6 +5,7 @@
 var groupAnagrams = function(strs) {
  let dictionary = {}
     for (s of strs){
+//         for every word in arr, reorder the char in words
         key = reorderStr(s);
         if (dictionary[key] === undefined){
             dictionary[key] = [s]
@@ -16,5 +17,5 @@ var groupAnagrams = function(strs) {
 };
 
 function reorderStr(str) {
-	return [...str].sort().join('');
+	return str.split('').sort().join('');
 }
