@@ -9,8 +9,11 @@ class Solution:
             
 #         return False
         dupSet = set()
+        # for num in nums: 
+        #     if num in dupSet: 
+        #         return True
+        #     dupSet.add(num)
+        # return False
         for num in nums: 
-            if num in dupSet: 
-                return True
             dupSet.add(num)
-        return False
+        return len(dupSet) != len(nums)
