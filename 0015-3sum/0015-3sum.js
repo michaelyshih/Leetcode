@@ -6,7 +6,6 @@ var threeSum = function(nums) {
     results = []
 //     sort reads negatives as string and sort them by integer
     nums.sort((a,b)=> a - b)
-    console.log(nums)
     
     for (let [i,ele] of nums.entries()){
         if (i > 0 && nums[i-1] == ele){
