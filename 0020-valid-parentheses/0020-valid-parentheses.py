@@ -1,26 +1,10 @@
-/**
- * @param {string} s
- * @return {boolean}
- */
-var isValid = function(s) {
-    const pairs = {
-      ")": "(",
-      "}":"{",
-      "]":"["
-    }
-    const stack = [];
-
-    for (let char of s ){
-      if (char in pairs){
-        const top = stack[stack.length-1];
-          if(stack.length > 0 && top === pairs[char]){
-            stack.pop();
-          } else {
-            return false;
-          }
-      } else{
-        stack.push(char);
-      }
-    }
-  return stack.length === 0;
-};
+class Solution:
+    def isValid(self, s: str) -> bool:
+        d = {'(':')', '{':'}','[':']'}
+        stack = []
+        for i in s:
+            if i in d:  # 1
+                stack.append(i)
+            elif len(stack) == 0 or d[stack.pop()] != i:  # 2
+                return False
+        return len(stack) == 0 # 3
