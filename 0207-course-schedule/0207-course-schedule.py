@@ -23,24 +23,6 @@ class Solution:
             if not _dfs(crs): return False
         return True
         
-#         q = deque()
-#         q.append(prerequisites[0][0])
-        
-        
-        
-#         while len(q) > 0:
-#             if numCourses <= 0:
-#                 return False
-#             curr = q.popleft()
-#             numCourses -= 1
-#             if curr in visited: 
-#                 return False
-#             for course in preCourse[curr]:
-#                 print("required:", course)
-#                 q.append(course)
-#             visited.add(curr)
-
-#         return True
 #         indegree = [0] * numCourses
 #         adj = [[] for _ in range(numCourses)]
 
