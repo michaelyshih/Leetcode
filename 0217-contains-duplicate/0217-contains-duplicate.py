@@ -6,7 +6,6 @@ class Solution:
             if count[num] == 1: 
                 return True
             count[num] += 1
-            
         return False
         # dupSet = set()
         # for num in nums: 
