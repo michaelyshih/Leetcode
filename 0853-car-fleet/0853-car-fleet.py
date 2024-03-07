@@ -23,9 +23,11 @@ class Solution:
 #         velocity target from the current position 
 #         divide that by speed of how many units will pass before hitting the end 
         res = [] 
+    
         for p, s in carsV: 
             carV = (target - p)/s
             res.append(carV)
             if len(res) >= 2 and res[-1] <= res[-2]:
                 res.pop()
+        print (res)
         return len(res)
