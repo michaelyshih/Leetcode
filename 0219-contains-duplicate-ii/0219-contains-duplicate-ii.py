@@ -1,6 +1,6 @@
 class Solution:
     def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
-        count = defaultdict(int)
+        count = Counter()
         window = []
         for i in range(len(nums)):
             num = nums[i]
