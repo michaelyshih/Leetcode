@@ -2,8 +2,7 @@ class Solution:
     def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
         count = Counter()
         window = []
-        for i in range(len(nums)):
-            num = nums[i]
+        for i, num in enumerate(nums):
             window.append(num)
             if len(window) > k + 1:
                 last = window.pop(0)
