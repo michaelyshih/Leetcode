@@ -4,6 +4,7 @@
 
 class Solution:
     def strangePrinter(self, s: str) -> int:
+        
         n = len(s)
         dp = [[n] * n for _ in range(n)]
         for length in range(1, n + 1):
