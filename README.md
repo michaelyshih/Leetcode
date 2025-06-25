@@ -15,4 +15,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0002-add-two-numbers](https://github.com/michaelyshih/Leetcode/tree/master/0002-add-two-numbers) |
+## Array
+|  |
+| ------- |
+| [0001-two-sum](https://github.com/michaelyshih/Leetcode/tree/master/0001-two-sum) |
+## Hash Table
+|  |
+| ------- |
+| [0001-two-sum](https://github.com/michaelyshih/Leetcode/tree/master/0001-two-sum) |
 <!---LeetCode Topics End-->
