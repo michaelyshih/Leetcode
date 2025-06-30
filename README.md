@@ -11,6 +11,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0002-add-two-numbers](https://github.com/michaelyshih/Leetcode/tree/master/0002-add-two-numbers) |
+| [0070-climbing-stairs](https://github.com/michaelyshih/Leetcode/tree/master/0070-climbing-stairs) |
 | [0268-missing-number](https://github.com/michaelyshih/Leetcode/tree/master/0268-missing-number) |
 ## Recursion
 |  |
@@ -53,6 +54,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0053-maximum-subarray](https://github.com/michaelyshih/Leetcode/tree/master/0053-maximum-subarray) |
+| [0070-climbing-stairs](https://github.com/michaelyshih/Leetcode/tree/master/0070-climbing-stairs) |
 | [0338-counting-bits](https://github.com/michaelyshih/Leetcode/tree/master/0338-counting-bits) |
 ## Binary Search
 |  |
@@ -75,4 +77,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0191-number-of-1-bits](https://github.com/michaelyshih/Leetcode/tree/master/0191-number-of-1-bits) |
 | [0268-missing-number](https://github.com/michaelyshih/Leetcode/tree/master/0268-missing-number) |
 | [0338-counting-bits](https://github.com/michaelyshih/Leetcode/tree/master/0338-counting-bits) |
+## Memoization
+|  |
+| ------- |
+| [0070-climbing-stairs](https://github.com/michaelyshih/Leetcode/tree/master/0070-climbing-stairs) |
 <!---LeetCode Topics End-->
