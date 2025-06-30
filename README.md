@@ -58,6 +58,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0070-climbing-stairs](https://github.com/michaelyshih/Leetcode/tree/master/0070-climbing-stairs) |
 | [0322-coin-change](https://github.com/michaelyshih/Leetcode/tree/master/0322-coin-change) |
 | [0338-counting-bits](https://github.com/michaelyshih/Leetcode/tree/master/0338-counting-bits) |
+| [1250-longest-common-subsequence](https://github.com/michaelyshih/Leetcode/tree/master/1250-longest-common-subsequence) |
 ## Binary Search
 |  |
 | ------- |
@@ -87,4 +88,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0322-coin-change](https://github.com/michaelyshih/Leetcode/tree/master/0322-coin-change) |
+## String
+|  |
+| ------- |
+| [1250-longest-common-subsequence](https://github.com/michaelyshih/Leetcode/tree/master/1250-longest-common-subsequence) |
 <!---LeetCode Topics End-->
