@@ -48,6 +48,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0053-maximum-subarray](https://github.com/michaelyshih/Leetcode/tree/master/0053-maximum-subarray) |
+| [0338-counting-bits](https://github.com/michaelyshih/Leetcode/tree/master/0338-counting-bits) |
 ## Binary Search
 |  |
 | ------- |
@@ -65,4 +66,5 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0191-number-of-1-bits](https://github.com/michaelyshih/Leetcode/tree/master/0191-number-of-1-bits) |
+| [0338-counting-bits](https://github.com/michaelyshih/Leetcode/tree/master/0338-counting-bits) |
 <!---LeetCode Topics End-->
